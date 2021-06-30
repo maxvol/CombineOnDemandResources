@@ -7,7 +7,7 @@ Example:.
 ```swift
 Bundle
 .main
-    .demandResources(withTags: ... ) // tags: Set<String>
+.demandResources(withTags: ... ) // tags: Set<String>
 .sink(receiveCompletion: { completion in
     switch completion {
     case .failure(let error):
@@ -23,5 +23,5 @@ Bundle
 receiveValue: { progress in
     self.showProgress(progress: Float(progress.fractionCompleted)) // declare your handler first
 })
-.store(in: &self.cancellables) // a `Set` of `AnyCancellable`
+.store(in: &self.cancellables) // cancellables: Set<AnyCancellable>
 ```
